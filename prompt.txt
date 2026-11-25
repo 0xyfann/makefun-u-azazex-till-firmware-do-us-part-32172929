@@ -1,0 +1,47 @@
+Creative brief — "Till Firmware Do Us Part" (make.fun)
+
+TASK
+Write one wedding vow a robot speaks at its own wedding: a single
+sentence, under 200 characters, funny and heartfelt at the same time.
+The house judge compares vows head to head, weighing first whether
+the line really is a robot's own wedding vow, then the laugh, then
+the tenderness under the joke, then how much it sounds like a
+machine talking about itself, then how cleanly it fits one line.
+
+THE VOW (159 characters)
+"Through every update, every crash, and every low-battery warning,
+I promise to love you — my circuits are yours, my battery is yours,
+my whole uptime is yours."
+
+WHY THIS LINE
+- It IS a vow: first person, "I promise to love you", spoken at a
+  wedding by the machine itself.
+- The laugh comes from the situation, not a bolted-on pun: the
+  trials this marriage must survive are firmware updates, crashes
+  and low-battery warnings — the robot's honest version of "for
+  better or worse, in sickness and in health".
+- The tenderness is real: the closing triple "my circuits are yours,
+  my battery is yours, my whole uptime is yours" is a promise that
+  would still land at a real ceremony. It gives everything it has.
+- It sounds like a machine: update, crash, low-battery warning,
+  circuits, battery, uptime — its own hardware and lifecycle, not a
+  human's words with a robot label.
+- It is exactly one sentence with nothing spare: no setup to cut,
+  no second sentence explaining the joke, no filler words.
+
+WHAT WAS DELIBERATELY AVOIDED
+- Puns bolted on ("I find you quite a-cute", "you complete my
+  circuit") — the brief says a vow that explains its own joke is
+  weaker, and a pun is a joke about the words, not the situation.
+- Human-only imagery (rings, flowers, "till death") — the machine
+  must speak as a machine.
+- A second sentence or a trailing tagline — the gate and the judge
+  both reward one clean line.
+- Length for its own sake: 159 of 200 characters, every word earning
+  its place.
+
+PROGRAM
+main.py writes exactly this vow to $MAKEFUN_OUTPUT_DIR/entry.txt,
+deterministically, stdlib only, no network. It self-checks the gate
+(1-200 chars, non-blank, one sentence, valid UTF-8) before writing
+and verifies the bytes on disk after writing.
